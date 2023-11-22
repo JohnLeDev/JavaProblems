@@ -5,5 +5,5 @@ import java.util.List;
 import com.lean.demoSpringSecurity.model.UserApp;
 
 public interface CustomeUserAppRespository {
-	List<UserApp> findUserByName(String username, String password);
+	List<UserApp> getUserAppCustom( String username, String password);
 }

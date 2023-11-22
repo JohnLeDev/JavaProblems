@@ -19,11 +19,13 @@ public class AppConfig {
 		http.csrf(csrf ->{
 			csrf.disable();
 		});
+		
 		http.headers().frameOptions().disable();
 		http.authorizeHttpRequests(authz -> {
 			authz.requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll();
-			authz.anyRequest().authenticated();
+			authz.anyRequest().permitAll();
 		});
+		http.httpBasic(ele -> ele.disable());
 		return http.build();
 	}
 	
