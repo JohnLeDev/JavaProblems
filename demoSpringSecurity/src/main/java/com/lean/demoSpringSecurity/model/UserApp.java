@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table
-@NamedQuery(name = "userApp.findByUser" , query = "SELECT c FROM UserApp c WHERE userApp = :username AND passwordApp = :password ")
+@NamedQuery(name = "userApp.findByUser" , query = "SELECT c FROM UserApp c WHERE userApp = :username")
 public class UserApp {
 	
 	@Id

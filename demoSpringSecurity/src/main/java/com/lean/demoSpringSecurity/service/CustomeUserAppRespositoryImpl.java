@@ -17,8 +17,7 @@ public class CustomeUserAppRespositoryImpl implements CustomeUserAppRespository 
 	public List<UserApp> getUserAppCustom(String username, String password) {
 		// TODO Auto-generated method stub
 		List<UserApp> data = entityManager.createNamedQuery("userApp.findByUser")
-		.setParameter("username",username)
-		.setParameter("password", password).getResultList();
+		.setParameter("username",username).getResultList();
 		return data;
 	}
 
